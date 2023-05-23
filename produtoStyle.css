@@ -16,14 +16,15 @@ body {
 }
 
 .produtos {
-  width: 100%;
-  height: 170vh;
+  width: 100vw;
+  height: 200vh;
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: space-between;
   align-items: center;
- }
+  border: 2px solid #FFFFFF;
+  margin: 0 auto;
+}
 
 .produtos h2 {
   color: #FFFFFF;
@@ -33,38 +34,41 @@ body {
 
 .ajuste h2{
   color: #191919;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .card-produtos {
   display: flex;
-  margin-top: 5%;
-  width: 80%;
-  height: 100%;
+  align-items: center;
+  width: 90vw;
+  height: 25%;
+  /* border: 1px solid #FFAA00; */
+  
 }
 
 .card {
   display: flex;
+  align-items: center;
+  justify-content: center;
   perspective: 1000px;
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 90%;
+  /* border: 1px solid #00FF15; */
+  
 }
-
-
 
 .front,
 .back {
-  height: 90%;
-  width: 80%;
+  height: 100%;
+  width: 60%;
   background-color: #e6e9f2;
-  border-radius: 20px;
   display: flex;
   padding: 2%;
-  border: solid 3px #ffaa00;
   position: absolute;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: all 1s ease;
+  
 }
 
 .front{
@@ -83,7 +87,13 @@ body {
 
 .front img {
   height: 60%;
-  border-radius: 20%;
+}
+
+.front .line{
+  width: 100%;
+  border-bottom: 1px solid #393939;
+  color: #393939;
+  margin: 15% 0 5% 0;
 }
 
 .back h5 {
@@ -94,7 +104,10 @@ body {
 
 .back p {
   color: #191919;
+ font-size: 14px;
 }
+
+
 
 .products .ajuste {
   display: flex;
@@ -102,7 +115,6 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 90%;
-  margin-top: 10px;
 }
 
 .card:hover .front {
@@ -113,8 +125,17 @@ body {
   transform: rotateY(0deg);
 }
 
+
+.container-botoes{
+  display: flex;
+  justify-content: space-around;
+  
+  width: 90vw;
+  /* border: 2px solid #0a53a7; */
+}
+
 .bt {
-  width: 80%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;
@@ -126,14 +147,14 @@ body {
   border-radius: 10px;
   position: relative;
   font-size: 16px;
-  margin: auto;
+  margin: 0 auto;
   cursor: pointer;
   border: 2px solid #00FF15;
   color: #FFFF;
   display: flex;
   align-items: center;
-  width: 98%;
-  height: 40px;
+  width: 80%;
+  height: 30px;
   justify-content: space-between;
   background-color: #FFFF;
 }
@@ -147,7 +168,7 @@ body {
 }
 
 .bt span {
-  padding: 0px 30px;
+  padding: 0px 10px;
   color: #00FF15;
   transition: all .3s ease .5s;
   z-index: 2;
